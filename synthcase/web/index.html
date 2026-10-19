@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Synthcase Forge</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/">SYNTHCASE / FORGE</a>
+      <nav aria-label="Language">
+        <a href="?lang=fr">FR</a><a href="?lang=en">EN</a><a href="?lang=es">ES</a>
+      </nav>
+    </header>
+    <main>
+      <section class="intro">
+        <p class="eyebrow" data-i18n="eyebrow"></p>
+        <h1 data-i18n="title"></h1>
+        <p class="lede" data-i18n="lede"></p>
+      </section>
+      <section class="workspace">
+        <aside>
+          <span class="number">01 /</span>
+          <h2 data-i18n="generate"></h2>
+          <label class="field" for="seed" data-i18n="seed"></label
+          ><input id="seed" type="number" min="0" max="4294967295" value="7" />
+          <div id="quotas"></div>
+          <button id="generate" data-i18n="run"></button>
+          <p role="status" id="status"></p>
+          <p class="hint" data-i18n="truth"></p>
+          <button class="secondary" id="download" data-i18n="download"></button>
+        </aside>
+        <article>
+          <div class="section-head">
+            <div>
+              <span class="number">02 /</span>
+              <h2 data-i18n="cases"></h2>
+            </div>
+            <span class="badge" data-i18n="synthetic"></span>
+          </div>
+          <div class="metrics">
+            <div><strong id="count">—</strong><span data-i18n="count"></span></div>
+            <div><strong id="bad">—</strong><span data-i18n="bad"></span></div>
+            <div><strong id="exact">—</strong><span data-i18n="exact"></span></div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th data-i18n="case"></th>
+                  <th data-i18n="received"></th>
+                  <th data-i18n="billed"></th>
+                  <th data-i18n="price"></th>
+                  <th data-i18n="total"></th>
+                  <th data-i18n="labels"></th>
+                </tr>
+              </thead>
+              <tbody id="rows"></tbody>
+            </table>
+          </div>
+          <h3 data-i18n="counterfactual"></h3>
+          <p class="hint" data-i18n="choose"></p>
+          <div class="pair-controls">
+            <select id="case-select" aria-label="Case / Cas / Caso"></select
+            ><select id="label-select" aria-label="Predicate / Prédicat / Predicado">
+              <option value="quantity_exceeds_receipt"></option>
+              <option value="price_mismatch"></option>
+              <option value="ready"></option></select
+            ><button id="pair" data-i18n="pair"></button>
+          </div>
+          <div id="pair-result"></div>
+          <code id="digest"></code>
+        </article>
+      </section>
+      <footer>
+        <p data-i18n="limits"></p>
+        <a href="https://github.com/gbesse/synthcase-forge">GitHub ↗</a>
+      </footer>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

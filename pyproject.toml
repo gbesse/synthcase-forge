@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "synthcase-forge"
+version = "0.1.0a1"
+description = "Cas synthétiques sous contraintes · Constrained synthetic cases · Casos sintéticos con restricciones"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["ortools==9.15.6755", "certifi==2026.10.18"]
+
+[project.scripts]
+synthcase = "synthcase.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["synthcase*"]
+
+[tool.setuptools.package-data]
+synthcase = ["web/*", "examples/*"]

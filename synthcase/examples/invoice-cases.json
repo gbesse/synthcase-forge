@@ -1,0 +1,135 @@
+{
+  "name": "Invoice acceptance cases / Cas de rapprochement facture / Casos de conciliación de facturas",
+  "description": {
+    "fr": "Créer des cas cohérents et des écarts contrôlés entre commande, réception et facture.",
+    "en": "Generate coherent cases and controlled differences between orders, receipts and invoices.",
+    "es": "Generar casos coherentes y diferencias controladas entre pedidos, recepciones y facturas."
+  },
+  "variables": {
+    "ordered_quantity": [
+      1,
+      12
+    ],
+    "received_quantity": [
+      1,
+      12
+    ],
+    "billed_quantity": [
+      1,
+      12
+    ],
+    "agreed_unit_cents": [
+      100,
+      400
+    ],
+    "billed_unit_cents": [
+      100,
+      400
+    ],
+    "invoice_total_cents": [
+      0,
+      4800
+    ]
+  },
+  "constraints": {
+    "receipt_within_order": {
+      "terms": {
+        "received_quantity": 1,
+        "ordered_quantity": -1
+      },
+      "op": "<=",
+      "rhs": 0
+    },
+    "billing_within_order": {
+      "terms": {
+        "billed_quantity": 1,
+        "ordered_quantity": -1
+      },
+      "op": "<=",
+      "rhs": 0
+    }
+  },
+  "products": [
+    {
+      "out": "invoice_total_cents",
+      "left": "billed_quantity",
+      "right": "billed_unit_cents"
+    }
+  ],
+  "immutable": [
+    "ordered_quantity",
+    "agreed_unit_cents",
+    "received_quantity"
+  ],
+  "labels": {
+    "quantity_exceeds_receipt": {
+      "terms": {
+        "billed_quantity": 1,
+        "received_quantity": -1
+      },
+      "op": ">",
+      "rhs": 0
+    },
+    "price_mismatch": {
+      "terms": {
+        "billed_unit_cents": 1,
+        "agreed_unit_cents": -1
+      },
+      "op": "!=",
+      "rhs": 0
+    },
+    "ready": {
+      "all": [
+        {
+          "terms": {
+            "billed_quantity": 1,
+            "received_quantity": -1
+          },
+          "op": "<=",
+          "rhs": 0
+        },
+        {
+          "terms": {
+            "billed_unit_cents": 1,
+            "agreed_unit_cents": -1
+          },
+          "op": "==",
+          "rhs": 0
+        }
+      ]
+    }
+  },
+  "cohorts": [
+    {
+      "id": "ready",
+      "count": 4,
+      "require": {
+        "ready": true
+      }
+    },
+    {
+      "id": "quantity-only",
+      "count": 3,
+      "require": {
+        "quantity_exceeds_receipt": true,
+        "price_mismatch": false
+      }
+    },
+    {
+      "id": "price-only",
+      "count": 3,
+      "require": {
+        "quantity_exceeds_receipt": false,
+        "price_mismatch": true
+      }
+    },
+    {
+      "id": "combined",
+      "count": 2,
+      "require": {
+        "quantity_exceeds_receipt": true,
+        "price_mismatch": true
+      }
+    }
+  ]
+}
