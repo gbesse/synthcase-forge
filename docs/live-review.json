@@ -1,0 +1,44 @@
+{
+  "model": "jev-1.13.0",
+  "opinions": [
+    {
+      "case_id": "case-0001",
+      "opinion": "plausible",
+      "confidence": 1.0,
+      "probabilities": {
+        "plausible": 1.0,
+        "implausible": 0.0,
+        "uncertain": 0.0
+      },
+      "review_required": false
+    },
+    {
+      "case_id": "case-0005",
+      "opinion": "plausible",
+      "confidence": 0.72,
+      "probabilities": {
+        "plausible": 0.81,
+        "implausible": 0.18,
+        "uncertain": 0.01
+      },
+      "review_required": true
+    },
+    {
+      "case_id": "case-0008",
+      "opinion": "plausible",
+      "confidence": 0.58,
+      "probabilities": {
+        "plausible": 0.72,
+        "implausible": 0.27,
+        "uncertain": 0.01
+      },
+      "review_required": true
+    }
+  ],
+  "usage": {
+    "input_tokens": 1044,
+    "output_tokens": 147
+  },
+  "model_opinion_not_ground_truth": true,
+  "deterministic_labels_modified": false
+}

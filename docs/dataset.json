@@ -1,0 +1,373 @@
+{
+  "status": "complete",
+  "synthetic": true,
+  "seed": 7,
+  "sampling": "seeded_random_target_optimization_not_uniform_sampling",
+  "spec_sha256": "777e0e5bc2be6ce254ba30232b305f1e35b3ccaccc66234f69505516cb60ba44",
+  "records": [
+    {
+      "id": "case-0001",
+      "cohort": "ready",
+      "values": {
+        "ordered_quantity": 6,
+        "received_quantity": 6,
+        "billed_quantity": 6,
+        "agreed_unit_cents": 124,
+        "billed_unit_cents": 124,
+        "invoice_total_cents": 744
+      },
+      "labels": {
+        "quantity_exceeds_receipt": false,
+        "price_mismatch": false,
+        "ready": true
+      },
+      "synthetic": true,
+      "solve_status": "OPTIMAL"
+    },
+    {
+      "id": "case-0002",
+      "cohort": "ready",
+      "values": {
+        "ordered_quantity": 9,
+        "received_quantity": 6,
+        "billed_quantity": 6,
+        "agreed_unit_cents": 129,
+        "billed_unit_cents": 129,
+        "invoice_total_cents": 774
+      },
+      "labels": {
+        "quantity_exceeds_receipt": false,
+        "price_mismatch": false,
+        "ready": true
+      },
+      "synthetic": true,
+      "solve_status": "OPTIMAL"
+    },
+    {
+      "id": "case-0003",
+      "cohort": "ready",
+      "values": {
+        "ordered_quantity": 9,
+        "received_quantity": 4,
+        "billed_quantity": 1,
+        "agreed_unit_cents": 322,
+        "billed_unit_cents": 322,
+        "invoice_total_cents": 322
+      },
+      "labels": {
+        "quantity_exceeds_receipt": false,
+        "price_mismatch": false,
+        "ready": true
+      },
+      "synthetic": true,
+      "solve_status": "OPTIMAL"
+    },
+    {
+      "id": "case-0004",
+      "cohort": "ready",
+      "values": {
+        "ordered_quantity": 7,
+        "received_quantity": 4,
+        "billed_quantity": 4,
+        "agreed_unit_cents": 318,
+        "billed_unit_cents": 318,
+        "invoice_total_cents": 1272
+      },
+      "labels": {
+        "quantity_exceeds_receipt": false,
+        "price_mismatch": false,
+        "ready": true
+      },
+      "synthetic": true,
+      "solve_status": "OPTIMAL"
+    },
+    {
+      "id": "case-0005",
+      "cohort": "quantity-only",
+      "values": {
+        "ordered_quantity": 10,
+        "received_quantity": 1,
+        "billed_quantity": 10,
+        "agreed_unit_cents": 163,
+        "billed_unit_cents": 163,
+        "invoice_total_cents": 1630
+      },
+      "labels": {
+        "quantity_exceeds_receipt": true,
+        "price_mismatch": false,
+        "ready": false
+      },
+      "synthetic": true,
+      "solve_status": "OPTIMAL"
+    },
+    {
+      "id": "case-0006",
+      "cohort": "quantity-only",
+      "values": {
+        "ordered_quantity": 11,
+        "received_quantity": 9,
+        "billed_quantity": 10,
+        "agreed_unit_cents": 160,
+        "billed_unit_cents": 160,
+        "invoice_total_cents": 1600
+      },
+      "labels": {
+        "quantity_exceeds_receipt": true,
+        "price_mismatch": false,
+        "ready": false
+      },
+      "synthetic": true,
+      "solve_status": "OPTIMAL"
+    },
+    {
+      "id": "case-0007",
+      "cohort": "quantity-only",
+      "values": {
+        "ordered_quantity": 10,
+        "received_quantity": 1,
+        "billed_quantity": 2,
+        "agreed_unit_cents": 123,
+        "billed_unit_cents": 123,
+        "invoice_total_cents": 246
+      },
+      "labels": {
+        "quantity_exceeds_receipt": true,
+        "price_mismatch": false,
+        "ready": false
+      },
+      "synthetic": true,
+      "solve_status": "OPTIMAL"
+    },
+    {
+      "id": "case-0008",
+      "cohort": "price-only",
+      "values": {
+        "ordered_quantity": 9,
+        "received_quantity": 3,
+        "billed_quantity": 3,
+        "agreed_unit_cents": 314,
+        "billed_unit_cents": 173,
+        "invoice_total_cents": 519
+      },
+      "labels": {
+        "quantity_exceeds_receipt": false,
+        "price_mismatch": true,
+        "ready": false
+      },
+      "synthetic": true,
+      "solve_status": "OPTIMAL"
+    },
+    {
+      "id": "case-0009",
+      "cohort": "price-only",
+      "values": {
+        "ordered_quantity": 9,
+        "received_quantity": 2,
+        "billed_quantity": 2,
+        "agreed_unit_cents": 257,
+        "billed_unit_cents": 386,
+        "invoice_total_cents": 772
+      },
+      "labels": {
+        "quantity_exceeds_receipt": false,
+        "price_mismatch": true,
+        "ready": false
+      },
+      "synthetic": true,
+      "solve_status": "OPTIMAL"
+    },
+    {
+      "id": "case-0010",
+      "cohort": "price-only",
+      "values": {
+        "ordered_quantity": 11,
+        "received_quantity": 3,
+        "billed_quantity": 2,
+        "agreed_unit_cents": 397,
+        "billed_unit_cents": 392,
+        "invoice_total_cents": 784
+      },
+      "labels": {
+        "quantity_exceeds_receipt": false,
+        "price_mismatch": true,
+        "ready": false
+      },
+      "synthetic": true,
+      "solve_status": "OPTIMAL"
+    },
+    {
+      "id": "case-0011",
+      "cohort": "combined",
+      "values": {
+        "ordered_quantity": 11,
+        "received_quantity": 4,
+        "billed_quantity": 6,
+        "agreed_unit_cents": 149,
+        "billed_unit_cents": 380,
+        "invoice_total_cents": 2280
+      },
+      "labels": {
+        "quantity_exceeds_receipt": true,
+        "price_mismatch": true,
+        "ready": false
+      },
+      "synthetic": true,
+      "solve_status": "OPTIMAL"
+    },
+    {
+      "id": "case-0012",
+      "cohort": "combined",
+      "values": {
+        "ordered_quantity": 12,
+        "received_quantity": 2,
+        "billed_quantity": 10,
+        "agreed_unit_cents": 130,
+        "billed_unit_cents": 205,
+        "invoice_total_cents": 2050
+      },
+      "labels": {
+        "quantity_exceeds_receipt": true,
+        "price_mismatch": true,
+        "ready": false
+      },
+      "synthetic": true,
+      "solve_status": "OPTIMAL"
+    }
+  ],
+  "missing_quotas": [],
+  "source_spec": {
+    "name": "Invoice acceptance cases / Cas de rapprochement facture / Casos de conciliación de facturas",
+    "description": {
+      "fr": "Créer des cas cohérents et des écarts contrôlés entre commande, réception et facture.",
+      "en": "Generate coherent cases and controlled differences between orders, receipts and invoices.",
+      "es": "Generar casos coherentes y diferencias controladas entre pedidos, recepciones y facturas."
+    },
+    "variables": {
+      "ordered_quantity": [
+        1,
+        12
+      ],
+      "received_quantity": [
+        1,
+        12
+      ],
+      "billed_quantity": [
+        1,
+        12
+      ],
+      "agreed_unit_cents": [
+        100,
+        400
+      ],
+      "billed_unit_cents": [
+        100,
+        400
+      ],
+      "invoice_total_cents": [
+        0,
+        4800
+      ]
+    },
+    "constraints": {
+      "receipt_within_order": {
+        "terms": {
+          "received_quantity": 1,
+          "ordered_quantity": -1
+        },
+        "op": "<=",
+        "rhs": 0
+      },
+      "billing_within_order": {
+        "terms": {
+          "billed_quantity": 1,
+          "ordered_quantity": -1
+        },
+        "op": "<=",
+        "rhs": 0
+      }
+    },
+    "products": [
+      {
+        "out": "invoice_total_cents",
+        "left": "billed_quantity",
+        "right": "billed_unit_cents"
+      }
+    ],
+    "immutable": [
+      "ordered_quantity",
+      "agreed_unit_cents",
+      "received_quantity"
+    ],
+    "labels": {
+      "quantity_exceeds_receipt": {
+        "terms": {
+          "billed_quantity": 1,
+          "received_quantity": -1
+        },
+        "op": ">",
+        "rhs": 0
+      },
+      "price_mismatch": {
+        "terms": {
+          "billed_unit_cents": 1,
+          "agreed_unit_cents": -1
+        },
+        "op": "!=",
+        "rhs": 0
+      },
+      "ready": {
+        "all": [
+          {
+            "terms": {
+              "billed_quantity": 1,
+              "received_quantity": -1
+            },
+            "op": "<=",
+            "rhs": 0
+          },
+          {
+            "terms": {
+              "billed_unit_cents": 1,
+              "agreed_unit_cents": -1
+            },
+            "op": "==",
+            "rhs": 0
+          }
+        ]
+      }
+    },
+    "cohorts": [
+      {
+        "id": "ready",
+        "count": 4,
+        "require": {
+          "ready": true
+        }
+      },
+      {
+        "id": "quantity-only",
+        "count": 3,
+        "require": {
+          "quantity_exceeds_receipt": true,
+          "price_mismatch": false
+        }
+      },
+      {
+        "id": "price-only",
+        "count": 3,
+        "require": {
+          "quantity_exceeds_receipt": false,
+          "price_mismatch": true
+        }
+      },
+      {
+        "id": "combined",
+        "count": 2,
+        "require": {
+          "quantity_exceeds_receipt": true,
+          "price_mismatch": true
+        }
+      }
+    ]
+  }
+}
